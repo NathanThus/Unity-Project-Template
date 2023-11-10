@@ -207,6 +207,30 @@ private Gun _railGun = new Gun();
 private Gun _railGun = new();
 ```
 
+- Summaries and explanations for the method on public or internal functions. This makes it far easier for the next developer to work with your code. Please include:
+    - Function Summary
+    - Parameter description
+    - Return values
+    - Thrown exceptions
+
+``` C#
+        /// <summary>
+        /// Reads the license plate from a texture, given an area and position.
+        /// </summary>
+        /// <param name="licensePlate">The camera feed.</param>
+        /// <param name="area">The rough area of the license plate.</param>
+        /// <param name="position">The position of the plate on the texture</param>
+        /// <param name="licensePlateNumber">The output string</param>
+        /// <returns>If the conversion was successful</returns>
+        /// <exception cref="ArgumentNullException"
+        /// <exception cref="ArgumentOutOfRangeException"
+        public bool ReadLicensePlate(Texture licensePlate, Vector2 area, Vector2 position)
+        {
+            ///
+            return true;
+        }
+```
+
 ## MonoBehaviour
 
 - If you access a Unity Property (like [Transform](https://docs.unity3d.com/ScriptReference/Transform.html)), make a reference to the transform and use that. Unity has to perform some calls under the hood, which adds unnecessary overhead.
