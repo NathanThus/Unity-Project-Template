@@ -5,13 +5,13 @@
 ## Changes
 <!-- Tip: You can just copy paste the below lines, or remove them as needed. -->
 ### Added
-`File.cs` : Was created. You can add the purpose here.
+`File` : Was created. You can add the purpose here.
 
 ### Updated
-`File.cs` : Was updated / renamed. You can add describe the changes you made here.
+`File` : Was updated / renamed. You can add describe the changes you made here.
 
 ### Removed
-`File.cs` : Was removed. You can add the reason here.
+`File` : Was removed. You can add the reason here.
 
 ## Testing
 
