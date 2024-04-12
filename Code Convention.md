@@ -259,12 +259,12 @@ private void SpawnEnemy()
 **Note: most suggestions are based on [UniTask](https://github.com/Cysharp/UniTask)**
 
 - Favour `async` over `Coroutines`. There are several advantages:
-      - It can be invoked from any method marked `async`, instead of only `Monobehaviour` classes.
-      - It provides better error handling (`yield` cannot be declared in `try/catch/finally`).
-      - It can return values when awaited, eliminating the need for callbacks.
-      - It can be easily chained.
-      - It does not require running on `Timing.PlayerLoop`, allowing other methods to take advantage of the timing.
-      - It has cancellation support, allowing the use of `CancellationTokens`. This reduces risk, as opposed to Coroutines.
+  - It can be invoked from any method marked `async`, instead of only `Monobehaviour` classes.
+  - It provides better error handling (`yield` cannot be declared in `try/catch/finally`).
+  - It can return values when awaited, eliminating the need for callbacks.
+  - It can be easily chained.
+  - It does not require running on `Timing.PlayerLoop`, allowing other methods to take advantage of the timing.
+  - It has cancellation support, allowing the use of `CancellationTokens`. This reduces risk, as opposed to Coroutines.
 
 - Favour UniTask over C# vanilla Tasks. It has fewer GC allocations, and has some useful Unity   specific API calls.
 
@@ -293,6 +293,6 @@ private void SpawnEnemy()
 - Do not trust the scene hieracrhy, as this can change significantly over the course of gameplay. If you need to reference a parent or child class, serialzie a reference. Common names are `_root` or `_parent`.
 
 - When raycasting, always consider the maxDistance. This improves performance significantly, as less calculations need to be made.
-      - Never use `MathF.Infinity`.
+    - Never use `MathF.Infinity`.
 
 - `FindObjectOfType` and any other general purpose searching methods should be avoided at all costs. If there truly is no other way, you should explain in comments why.
